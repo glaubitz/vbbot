@@ -1,0 +1,64 @@
+ViewBar Bot 1.1.1
+(all issues from 1.0.0 fixed)
+Apr., 21 2001
+
+BUGS:
+
+BUG01:
+
+There is still maximize and resize in the sys-menu,
+remove it.
+->fixed (12/18/2k)
+
+BUG02:
+
+g_Locations.Locations [i] contains garbage after pressing "close"
+in Prefs dialog.->fixed, GetLocationAt () is now used to retrieve
+location string from buffer
+
+BUG03:
+
+When clicking "Apply" in Prefs Dialog, the Location list is not
+synchronized with internal memory but data in the list will be
+added to internal list.
+->fixed, the list in main window now is synced to memory, only
+list in prefs dialog is not synced->fixed
+
+BUG04:
+
+The location management is not DYNAMICALLY. There is a
+fixed array of location strings initialized on program
+startup.
+->fixed
+
+BUG05:
+
+When more than two locations are in internal buffer, there somehow gets
+an addtional character added to location string #2.->fixed,
+(needed to allocate lstlen (string) + 1 bytes instead lstrlen (string)
+bytes to provide space for '\0'
+
+
+BUG06:
+
+When main window looses focus and then gains focus back again "Start"
+in menu "Bot" will be enabled even when bot timers are active.->fixed
+
+BUG07:
+
+The software is NOT compatible with Windows 95 though it normally should
+be compatible. The fmouse.vxd can not be loaded under Windows 95, see
+"FakeMouse Virtual Device Driver" bug list.
+
+BUG08:
+
+When in Preferences a link is chosen in the URL list and removed
+with "Remove", but the dialog is then closed with "Close" the
+appropiate entry will be removed from internal list in memory
+though it still exist in the vbbot.ini since "Apply" was not chosen
+in the Preferences dialog.
+
+BUG09:
+
+When the "Remove" button is clicked in the Preferences dialog an URL-item
+will be removed from the list though there has no item been selected.

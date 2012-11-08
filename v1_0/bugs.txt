@@ -1,0 +1,11 @@
+ViewBar Bot 1.0 MFC
+Nov., 25 2000
+
+BUG01:
+
+Does not fake viewbars that check for mouse
+movements, thus it is effectless.
+
+Will be fixed with version 1.1 that adds support
+for fake mouse movements through a virtual device
+driver (FakeMouse).

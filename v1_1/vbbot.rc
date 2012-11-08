@@ -1,0 +1,288 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Deutsch (Deutschland) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)
+#ifdef _WIN32
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Deutsch (Deutschland) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Englisch (USA) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "ADI\0"
+            VALUE "FileDescription", "Viewbar Bot Program Module\0"
+            VALUE "FileVersion", "1.0.0\0"
+            VALUE "InternalName", "vbbot\0"
+            VALUE "LegalCopyright", "Copyright © ADI 2000-2001\0"
+            VALUE "OriginalFilename", "vbbot.exe\0"
+            VALUE "ProductName", "Viewbar Bot\0"
+            VALUE "ProductVersion", "1.1.2\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+ID_ABOUTDLG DIALOG DISCARDABLE  0, 0, 173, 81
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Viewbar Bot 1.1.2 - May., 06 2001\r\n\r\nThis program is freeware and can be freely\r\ncopied.\r\n\r\nCopyright (c) 2000-2001 ADI",
+                    IDC_STATIC,13,10,147,50
+    PUSHBUTTON      "&Close",ID_CLOSE,116,60,50,14
+END
+
+ID_MAINDLG DIALOG DISCARDABLE  300, 200, 161, 110
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Viewbar Bot - (c) ADI"
+MENU ID_MAINMENU
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         ID_LOCATIONS,5,12,150,60,NOT LBS_NOTIFY | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "",ID_LOCATIONINTERVAL,15,95,130,8
+    LTEXT           "",ID_MOUSEINTERVAL,15,86,130,8
+    LTEXT           "Status",IDC_STATIC,70,75,21,8
+    LTEXT           "Locations",IDC_STATIC,65,2,32,8
+END
+
+ID_HELPDLG DIALOG DISCARDABLE  0, 0, 224, 61
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Help"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "&Close",ID_CLOSE,167,45,50,14
+    LTEXT           "Use this tool to fake any viewbar. Open the ""Preferences"" dialog to edit the intervals and add the desired locations (URLs) to the list. After applying the settings, the ""Start"" option will be enabled, click it to start, ""Stop"" to stop.",
+                    IDC_STATIC,11,10,148,40
+END
+
+ID_PREFSDLG DIALOG DISCARDABLE  0, 0, 289, 101
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Preferences"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Timer Settings",IDC_STATIC,5,14,134,64
+    LTEXT           "Mouse movement interval",IDC_STATIC,10,30,82,8
+    LTEXT           "Location change interval",IDC_STATIC,10,52,79,8
+    COMBOBOX        ID_MOUSEINTERVAL,99,28,28,50,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        ID_LOCATIONINTERVAL,99,51,28,50,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Locations",IDC_STATIC,150,14,134,64
+    PUSHBUTTON      "&Apply",ID_APPLY,175,85,50,14
+    PUSHBUTTON      "&Close",ID_CLOSE,232,85,50,14
+    LISTBOX         ID_LOCATIONS,155,25,121,35,NOT LBS_NOTIFY | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "A&dd",ID_ADDLOCATION,164,62,50,14
+    PUSHBUTTON      "&Remove",ID_REMOVELOCATION,224,62,50,14
+    LTEXT           "s",IDC_STATIC,130,30,8,8
+    LTEXT           "s",IDC_STATIC,130,52,8,8
+END
+
+ID_ADDLOCATIONDLG DIALOG DISCARDABLE  0, 0, 173, 42
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add Location"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        ID_LOCATION,5,7,162,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Add",ID_ADDLOCATION,35,27,50,14
+    PUSHBUTTON      "&Close",ID_CLOSE,91,27,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    ID_ABOUTDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 166
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 74
+    END
+
+    ID_MAINDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 154
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 102
+    END
+
+    ID_HELPDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 217
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 54
+    END
+
+    ID_PREFSDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 282
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 94
+    END
+
+    ID_ADDLOCATIONDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 166
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 35
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+ID_MAINMENU MENU DISCARDABLE 
+BEGIN
+    POPUP "&Bot"
+    BEGIN
+        MENUITEM "&Start",                      ID_BOTSTART
+        MENUITEM "St&op",                       ID_BOTSTOP, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Preferences",                ID_BOTPREFS
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_BOTEXIT
+    END
+    POPUP "&?"
+    BEGIN
+        MENUITEM "&Help",                       ID_QUESTIONHELP
+        MENUITEM SEPARATOR
+        MENUITEM "&About",                      ID_QUESTIONABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_STRING1              "5"
+    ID_STRING2              "10"
+    ID_STRING3              "15"
+    ID_STRING4              "20"
+    ID_STRING5              "25"
+    ID_STRING6              "30"
+    ID_STRING7              "60"
+    ID_STRING8              "90"
+    ID_STRING9              "120"
+    ID_STRING10             "150"
+END
+
+#endif    // Englisch (USA) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
